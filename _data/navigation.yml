@@ -7,5 +7,5 @@ main:
     url: /certifications/
   #- title: "Tags"
   #  url: /tags/
-  - title: "Whoami$"
+  - title: "$ whoami"
     url: /about/
