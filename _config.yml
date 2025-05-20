@@ -60,7 +60,7 @@ plugins:
 author:
   name   : "s3d1p0x"
   avatar : "/assets/images/bio-photo.jpg"
-  bio    : "My awesome biography constrained to a sentence or two goes here."
+  bio    : "Exploring vulnerabilities, Mastering attacks, Sharing offensive cybersecurity knowledge."
   links:
     #- label: "Website"
     #  icon: "fas fa-fw fa-link"
@@ -77,15 +77,15 @@ author:
 
 footer:
   links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+    #- label: "Twitter"
+    #  icon: "fab fa-fw fa-twitter-square"
+    #  url: "https://twitter.com/"
+    #- label: "GitHub"
+    #  icon: "fab fa-fw fa-github"
+    #  url: "https://github.com/"
+    #- label: "Instagram"
+    #  icon: "fab fa-fw fa-instagram"
+    #  url: "https://instagram.com/"
 
 defaults:
   # _posts
