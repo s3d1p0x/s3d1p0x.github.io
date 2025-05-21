@@ -7,12 +7,35 @@ layout: single
 {% assign cert_posts = site.categories.certifications %}
 {% for post in cert_posts %}
 
+  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+  {% if post.header.teaser %}
+    {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
+  {% else %}
+    {% assign teaser = site.teaser %}
+  {% endif %}
+
   <div class="list__item">
-    <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork"{% if post.locale %} lang="{{ post.locale }}"{% endif %}>
+      
       <h2 class="archive__item-title no_toc" itemprop="headline">
-        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        {% if post.link %}
+          <a href="{{ post.link }}">{{ title }}</a>
+          <a href="{{ post.url | relative_url }}" rel="permalink">
+            <i class="fas fa-link" aria-hidden="true" title="permalink"></i>
+            <span class="sr-only">Permalink</span>
+          </a>
+        {% else %}
+          <a href="{{ post.url | relative_url }}" rel="permalink">{{ title }}</a>
+        {% endif %}
       </h2>
-      {% include page__meta.html post=post type="list" %}
+
+      {% include page__meta.html type="list" %}
+
+      {% if post.excerpt %}
+        <p class="archive__item-excerpt" itemprop="description">
+          {{ post.excerpt | markdownify | strip_html | truncate: 160 }}
+        </p>
+      {% endif %}
     </article>
   </div>
 
