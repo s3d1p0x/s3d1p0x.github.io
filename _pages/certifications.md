@@ -9,7 +9,7 @@ layout: single
   {% for post in cert_posts %}
     <li>
       <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-      {% include readtime.html content=post.content %}
+      {% include page__meta.html content=post.content %}
     </li>
   {% endfor %}
 </ul>
