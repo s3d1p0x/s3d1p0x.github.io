@@ -9,6 +9,14 @@ layout: single
     border-bottom: 0 !important;
     box-shadow: none !important;
   }
+
+  h2 {
+    margin-bottom: 0.25rem !important; /* ou 0 si tu veux coller complètement */
+  }
+
+  .page__meta {
+    margin-top: 0.25rem !important; /* réduit l’espace au-dessus du bloc read time */
+  }
 </style>
 
 {% assign cert_posts = site.categories.certifications %}
