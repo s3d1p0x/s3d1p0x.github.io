@@ -118,5 +118,5 @@ tag_archive:
 collections:
   certification:
     output: true
-    permalink: /certifications/
+    path: "_certifications"
 
