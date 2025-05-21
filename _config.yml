@@ -117,9 +117,3 @@ category_archive:
 tag_archive:
   type: liquid
   path: /tags/
-
-collections:
-  certification:
-    output: true
-    path: "_certifications"
-
