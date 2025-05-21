@@ -1,11 +1,7 @@
 ---
 title: "ProLab : Dante"
-category:
-  - certifications
-tags:
-  - dante
-  - prolabs
-  - certification
+categories: [certifications]
+tags: [ dante , prolabs , certifications ]
 #permalink: /certifications/CPTS/
 ---
 

@@ -1,11 +1,7 @@
 ---
 title: "ProLab : Zephyr"
-category:
-  - certifications
-tags:
-  - zephyr
-  - prolabs
-  - certification
+categories: [certifications]
+tags: [ zephyr , prolabs , certifications ]
 #permalink: /certifications/CPTS/
 ---
 
