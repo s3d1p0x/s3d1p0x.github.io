@@ -8,11 +8,6 @@ layout: single
 {% for post in cert_posts %}
 
   {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
-  {% if post.header.teaser %}
-    {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
-  {% else %}
-    {% assign teaser = site.teaser %}
-  {% endif %}
 
   <div class="list__item">
     <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork"{% if post.locale %} lang="{{ post.locale }}"{% endif %}>
@@ -29,12 +24,6 @@ layout: single
       </h2>
 
       {% include page__meta.html type="list" %}
-
-      {% if post.excerpt %}
-        <p class="archive__item-excerpt" itemprop="description">
-          {{ post.excerpt | markdownify | strip_html | truncate: 160 }}
-        </p>
-      {% endif %}
     </article>
   </div>
 
