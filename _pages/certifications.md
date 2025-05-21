@@ -9,7 +9,7 @@ layout: single
 
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork"{% if post.locale %} lang="{{ post.locale }}"{% endif %}>
-    <h2>
+    <h2 class="no-underline custom-title">
       <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
     </h2>
 
