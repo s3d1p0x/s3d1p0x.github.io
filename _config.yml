@@ -109,7 +109,6 @@ defaults:
     values:
       layout: single
       author_profile: true
-      read_time: true
 
 category_archive:
   type: liquid
