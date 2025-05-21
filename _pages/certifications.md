@@ -12,15 +12,7 @@ layout: single
   <div class="list__item">
     <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork"{% if post.locale %} lang="{{ post.locale }}"{% endif %}>
       <h2 class="archive__item-title no_toc" itemprop="headline">
-        {% if post.link %}
-          <a href="{{ post.link }}">{{ title }}</a>
-          <a href="{{ post.url | relative_url }}" rel="permalink">
-            <i class="fas fa-link" aria-hidden="true" title="permalink"></i>
-            <span class="sr-only">Permalink</span>
-          </a>
-        {% else %}
-          <a href="{{ post.url | relative_url }}" rel="permalink">{{ title }}</a>
-        {% endif %}
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
       </h2>
 
       {% include page__meta.html type="list" %}
