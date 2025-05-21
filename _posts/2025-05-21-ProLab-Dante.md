@@ -1,11 +1,12 @@
 ---
-title: "CPTS"
+title: "ProLab : Dante"
 category:
   - certifications
 tags:
-  - cpts
+  - dante
+  - prolabs
   - certification
 #permalink: /certifications/CPTS/
 ---
 
-![certif_cpts](/assets/images/certif_cpts.png)
+![certif_dante](/assets/images/certif_dante.png)
