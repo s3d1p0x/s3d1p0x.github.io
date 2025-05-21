@@ -10,7 +10,7 @@ layout: single
   <div class="list__item">
     <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
       <h2 class="archive__item-title no_toc" itemprop="headline">
-        <a href="{{ post.url | relative_url }}" rel="permalink">{{ post.title }}</a>
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
       </h2>
       {% include page__meta.html post=post type="list" %}
     </article>
