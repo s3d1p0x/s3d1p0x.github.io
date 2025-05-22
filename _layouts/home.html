@@ -5,16 +5,18 @@ layout: default
 <div id="main" role="main">
   {% include sidebar.html %}
 
-  <header style="text-align: center;">
+  <!-- Hero Section -->
+  <header style="text-align: center; background-color: var(--color-gray-800);">
       <h1 id="page-title" class="page__title" style="margin-top: 2rem; text-align: center;"{% if page.locale %} lang="{{ page.locale }}"{% endif %}>
         Diving into the heart of offensive cybersecurity
       </h1>
-      <p style="text-align: center; color: #888888; margin-top: 0.5rem; font-weight: 500;">
-        Pentest • Reverse • Exploit Dev • Malware Analysis
+      <p style="text-align: center; background-color: var(--color-gray-400); margin-top: 0.5rem; font-weight: 500;">
+        Pentest • Reverse • Exploit Dev • Malware Analysis • Cryptography
       </p>
   </header>
 
-    <section class="py-16 px-4 max-w-4xl mx-auto">
+    <!-- À propos -->
+    <section>
       <h2>À propos du blog</h2>
       <p style="color: grey">
       Ce blog est dédié à tous ceux qui aiment comprendre, démonter, contourner et exploiter.
@@ -22,4 +24,24 @@ layout: default
       des write-ups, et des retours d’expérience concrets.
     </p>
   </section>
+
+
+  <!-- Derniers articles -->
+
+  <section>
+    <h2 style="text-align: center">Derniers articles</h2>
+    <div style="grid md:grid-cols-2 gap-8">
+      <article class="bg-gray-800 p-6 rounded-xl shadow">
+        <h3 class="text-2xl font-semibold">Bypass UAC sur Windows 11</h3>
+        <p class="text-gray-400 mt-2">Publié le 15 mai 2025 - Une méthode simple et fiable pour contourner l'UAC à l'aide de scripts PowerShell.</p>
+        <a href="#" class="text-blue-500 hover:underline mt-3 inline-block">Lire l'article</a>
+      </article>
+      <article class="bg-gray-800 p-6 rounded-xl shadow">
+        <h3 class="text-2xl font-semibold">Analyse d'un malware en C++ avec Ghidra</h3>
+        <p class="text-gray-400 mt-2">Publié le 12 mai 2025 - Décryptage d'un dropper C++ et extraction des payloads cachés.</p>
+        <a href="#" class="text-blue-500 hover:underline mt-3 inline-block">Lire l'article</a>
+      </article>
+    </div>
+  </section>
+  
 </div>
