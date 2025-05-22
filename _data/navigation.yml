@@ -19,10 +19,10 @@ main:
     url: /cryptography/
   - title: "Write-Up"
     url: /write-up/
-  - title: "Certifications"
-    url: /certifications/
   - title: "Projects"
     url: /projects/
+  - title: "Certifications"
+    url: /certifications/
   #- title: "Tags"
   #  url: /tags/
   - title: "$ whoami"
