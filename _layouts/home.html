@@ -1,71 +1,20 @@
 ---
-layout: default
-title: "Accueil"
+layout: archive
 ---
 
-<!-- Hero Section -->
-<section class="bg-gray-900 text-gray-100 py-20 text-center">
-  <h1 class="text-4xl md:text-6xl font-bold">Explorez les entrailles de la cybersécurité offensive</h1>
-  <p class="mt-4 text-xl text-gray-400">Pentest • Reverse • Exploit Dev • Malware Analysis</p>
-  <a href="#articles" class="mt-6 inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full">▶ Lire les derniers articles</a>
-</section>
+{{ content }}
 
-<!-- À propos -->
-<section class="py-16 px-4 max-w-4xl mx-auto text-gray-300">
-  <h2 class="text-3xl font-bold mb-4 text-white">À propos du blog</h2>
-  <p class="text-lg">
-    Ce blog est dédié à tous ceux qui aiment comprendre, démonter, contourner et exploiter.
-    Que vous soyez pentester, étudiant en cybersécurité ou amateur de CTFs, vous trouverez ici des analyses profondes,
-    des write-ups, et des retours d’expérience concrets.
-  </p>
-</section>
+<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
 
-<!-- Catégories -->
-<section class="bg-gray-800 py-16 px-4">
-  <h2 class="text-3xl font-bold text-center text-white mb-10">Catégories principales</h2>
-  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto text-center">
-    <div class="bg-gray-700 p-6 rounded-xl shadow">🔍 Pentest Web</div>
-    <div class="bg-gray-700 p-6 rounded-xl shadow">🌐 Pentest Réseau</div>
-    <div class="bg-gray-700 p-6 rounded-xl shadow">🖥️ Windows / Linux</div>
-    <div class="bg-gray-700 p-6 rounded-xl shadow">⚔️ Reverse & Exploitation</div>
-    <div class="bg-gray-700 p-6 rounded-xl shadow">🧪 Analyse Malware</div>
-    <div class="bg-gray-700 p-6 rounded-xl shadow">🧠 Crypto & CTF</div>
-  </div>
-</section>
+{% if paginator %}
+  {% assign posts = paginator.posts %}
+{% else %}
+  {% assign posts = site.posts %}
+{% endif %}
 
-<!-- Derniers articles -->
-<section id="articles" class="py-16 px-4 max-w-6xl mx-auto text-gray-100">
-  <h2 class="text-3xl font-bold mb-10 text-center">Derniers articles</h2>
+{% assign entries_layout = page.entries_layout | default: 'list' %}
+<div class="entries-{{ entries_layout }}">
+  {% include documents-collection.html entries=posts type=entries_layout %}
+</div>
 
-  {% assign entries_layout = page.entries_layout | default: 'list' %}
-  {% if paginator %}
-    {% assign posts = paginator.posts %}
-  {% else %}
-    {% assign posts = site.posts %}
-  {% endif %}
-
-  <div class="entries-{{ entries_layout }} grid md:grid-cols-2 gap-8">
-    {% for post in posts limit:6 %}
-      <article class="bg-gray-800 p-6 rounded-xl shadow">
-        <h3 class="text-2xl font-semibold">
-          <a href="{{ post.url | relative_url }}" class="hover:underline text-blue-400">{{ post.title }}</a>
-        </h3>
-        <p class="text-gray-400 mt-2">{{ post.date | date: "%d %B %Y" }} – {{ post.excerpt | strip_html | truncate: 140 }}</p>
-      </article>
-    {% endfor %}
-  </div>
-
-  {% include paginator.html %}
-</section>
-
-<!-- Réseaux -->
-<section class="bg-gray-800 py-16 px-4 text-center text-gray-100">
-  <h2 class="text-3xl font-bold mb-4">Restons connectés</h2>
-  <p class="text-gray-400 mb-6">Suivez-moi pour plus de contenu ou proposez un sujet</p>
-  <div class="flex justify-center space-x-4">
-    <a href="#" class="text-blue-400 hover:text-blue-600">GitHub</a>
-    <a href="#" class="text-blue-400 hover:text-blue-600">Twitter</a>
-    <a href="#" class="text-blue-400 hover:text-blue-600">LinkedIn</a>
-    <a href="#" class="text-blue-400 hover:text-blue-600">HTB</a>
-  </div>
-</section>
+{% include paginator.html %}
