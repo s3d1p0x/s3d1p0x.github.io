@@ -5,7 +5,16 @@ layout: default
 <div id="main" role="main">
   {% include sidebar.html %}
 
-  <div>
+  <header style="color: #888888; py-20; text-align: center;">
+      <h1 id="page-title" class="page__title" style="margin-top: 2rem; text-align: center;"{% if page.locale %} lang="{{ page.locale }}"{% endif %}>
+        Diving into the heart of offensive cybersecurity
+      </h1>
+      <p style="text-align: center; color: #888888; margin-top: 0.5rem; font-weight: 500;">
+        Pentest • Reverse • Exploit Dev • Malware Analysis
+      </p>
+  </header>
+
+<!--
     {% unless page.header.overlay_color or page.header.overlay_image %}
     {% endunless %}
     <h1 id="page-title" class="page__title" style="margin-top: 2rem; text-align: center;"{% if page.locale %} lang="{{ page.locale }}"{% endif %}>
@@ -15,6 +24,16 @@ layout: default
       Pentest • Reverse • Exploit Dev • Malware Analysis
     </p>
 
+-->
+
+    <section class="py-16 px-4 max-w-4xl mx-auto">
+      <h2 style="color: grey">À propos du blog</h2>
+      <p style="text-lg text-gray-300">
+      Ce blog est dédié à tous ceux qui aiment comprendre, démonter, contourner et exploiter.
+      Que vous soyez pentester, étudiant en cybersécurité, ou amateur de CTFs, vous trouverez ici des analyses profondes,
+      des write-ups, et des retours d’expérience concrets.
+    </p>
+  </section>
+
     {{ content }}
-  </div>
 </div>
