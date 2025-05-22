@@ -1,40 +1,20 @@
 ---
-layout: splash
-title: "Accueil"
-header:
-  overlay_color: "#000"
-  overlay_filter: "0.5"
-  overlay_image: /assets/images/hero.jpg
-  actions:
-    - label: "Lire les derniers articles"
-      url: "#articles"
-excerpt: "Pentest • Reverse • Exploit Dev • Malware Analysis"
+layout: archive
 ---
 
-## À propos du blog
+{{ content }}
 
-Ce blog est dédié à tous ceux qui aiment comprendre, démonter, contourner et exploiter. Que vous soyez pentester, étudiant en cybersécurité ou amateur de CTFs, vous trouverez ici des analyses profondes, des write-ups et des retours d’expérience concrets.
+<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
 
-## Catégories principales
+{% if paginator %}
+  {% assign posts = paginator.posts %}
+{% else %}
+  {% assign posts = site.posts %}
+{% endif %}
 
-- 🔍 Pentest Web
-- 🌐 Pentest Réseau
-- 🖥️ Windows / Linux
-- ⚔️ Reverse & Exploitation
-- 🧪 Analyse Malware
-- 🧠 Crypto & CTF
+{% assign entries_layout = page.entries_layout | default: 'list' %}
+<div class="entries-{{ entries_layout }}">
+  {% include documents-collection.html entries=posts type=entries_layout %}
+</div>
 
-## Derniers articles
-
-{% for post in site.posts limit:6 %}
-- [{{ post.title }}]({{ post.url | relative_url }}) - {{ post.date | date: "%d %B %Y" }}
-{% endfor %}
-
-## Restons connectés
-
-Suivez-moi pour plus de contenu ou proposez un sujet :
-
-- [GitHub](#)
-- [Twitter](#)
-- [LinkedIn](#)
-- [HTB](#)
+{% include paginator.html %}
