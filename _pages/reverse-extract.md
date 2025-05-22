@@ -27,3 +27,9 @@ layout: single
     <h2>
       <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
     </h2>
+
+    {% include page__meta.html type="list" %}
+  </article>
+</div>
+
+{% endfor %}
