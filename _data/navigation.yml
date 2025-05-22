@@ -3,6 +3,22 @@ main:
     url: /posts/
   - title: "Categories"
     url: /categories/
+  - title: "Web"
+    url: /web/
+  - title: "Network"
+    url: /network/
+  - title: "Active Directory"
+    url: /ad/
+  - title: "Operating Systems"
+    url: /os/
+  - title: "Reverse Engineering"
+    url: /re/
+  - title: "Malware Analysis"
+    url: /malware/
+  - title: "Cryptography"
+    url: /cryptography/
+  - title: "Write-Up"
+    url: /write-up/
   - title: "Certifications"
     url: /certifications/
   - title: "Projects"
