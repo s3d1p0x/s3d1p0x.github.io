@@ -11,11 +11,11 @@ layout: single
   }
 
   h2 {
-    margin-bottom: 0rem !important; /* ou 0 si tu veux coller complètement */
+    margin-bottom: 0rem !important;
   }
 
   .page__meta {
-    margin-top: 0rem !important; /* réduit l’espace au-dessus du bloc read time */
+    margin-top: 0rem !important;
   }
 </style>
 
