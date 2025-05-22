@@ -1,12 +1,16 @@
 ---
 layout: default
 ---
-<!--
-<style>
-  h1, h2, h3, h4 {
-    border-bottom: 0 !important;
-    box-shadow: none !important;
-  }
-</style>
--->
+
+<div id="main" role="main">
+  {% include sidebar.html %}
+
+  <div class="archive">
+    {% unless page.header.overlay_color or page.header.overlay_image %}
+      <h1 id="page-title" class="page__title"{% if page.locale %} lang="{{ page.locale }}"{% endif %}>{{ page.title }}</h1>
+    {% endunless %}
+    {{ content }}
+  </div>
+</div>
+
 <h1>Explorez les entrailles de la cybersécurité offensive</h1>
