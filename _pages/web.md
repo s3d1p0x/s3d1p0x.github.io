@@ -1,5 +1,5 @@
 ---
-title: "Web Pentest"
+title: "🔍 Web Pentest"
 permalink: /web/
 layout: single
 ---
