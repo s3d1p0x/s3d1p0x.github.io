@@ -3,6 +3,13 @@ permalink: /about/
 title: "$ whoami"
 ---
 
+<style>
+  h1, h2, h3, h4 {
+    border-bottom: 0 !important;
+    box-shadow: none !important;
+  }
+</style>
+
 Hi there, curious hacker.
 
 I'm passionate about **offensive cyber security**. I explore vulnerabilities, unexpected behaviors, obscure corners of Windows, Linux, networks, web apps and even malicious binaries we'd rather ignore.
