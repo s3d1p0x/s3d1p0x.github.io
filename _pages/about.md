@@ -32,15 +32,15 @@ I launched this blog to **document my research**, **share techniques**, and also
 
 - **Fun & Crackmes**: I like to code or solve small protected binaries. It's fun, cerebral, and it muscles the analysis.
 
-## 👨‍💻 Pourquoi ce blog ?
+## 👨‍💻 Why this blog?
 
-Parce que je crois qu’il faut **rendre visible** ce qui est souvent caché :
+Because I believe in **making visible** what is often hidden:
 
-- Les méthodes derrière les outils.
-- Les idées derrière les exploits.
-- Et les erreurs derrière les succès.
+- The methods behind the tools.
+- The ideas behind the feats.
+- And the mistakes behind the successes.
 
-C’est aussi un moyen d’échanger avec la communauté. Si tu trouves une faille, un write-up utile, ou si tu veux proposer un défi tordu : **fais-moi signe**.
+It's also a way of sharing with the community. If you find a loophole, a useful write-up, or want to propose a twisted challenge: **let me know**.
 
-> 💬 Que tu sois débutant ou red teamer aguerri, ce blog est pour toi.  
-> Si tu aimes comprendre en profondeur, tu es au bon endroit.
+> 💬 Whether you're a beginner or a seasoned red teamer, this blog is for you.  
+> If you like to understand things in depth, you've come to the right place.
