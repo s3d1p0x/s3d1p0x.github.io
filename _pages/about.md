@@ -20,17 +20,17 @@ I launched this blog to **document my research**, **share techniques**, and also
 
 - **Pentest Web & Network**: I spend time looking for SQL injections, XSS, RCE, privilege escalations or pivot techniques. Understanding how network and web stacks work is essential to better circumvent them.
   
-- Reverse Engineering & Binary Exploitation**: I like to disassemble executables, read assembler, understand the internal logic of a program and write my own exploits, sometimes starting from a simple memory bug.
+- **Reverse Engineering & Binary Exploitation**: I like to disassemble executables, read assembler, understand the internal logic of a program and write my own exploits, sometimes starting from a simple memory bug.
 
-- Malware Analysis**: Static or dynamic analysis, I like to track down malicious behavior, understand persistence mechanisms, spot C2s and extract payloads from an obscure binary.
+- **Malware Analysis**: Static or dynamic analysis, I like to track down malicious behavior, understand persistence mechanisms, spot C2s and extract payloads from an obscure binary.
 
-- Active Directory & Windows Internals**: I delve into the bowels of Windows, its security mechanisms, from UAC to protocol abuse in Active Directory environments. Microsoft systems are a rich and complex terrain.
+- **Active Directory & Windows Internals**: I delve into the bowels of Windows, its security mechanisms, from UAC to protocol abuse in Active Directory environments. Microsoft systems are a rich and complex terrain.
 
-- Applied cryptography & CTF**: Without being a crypto-math, I like to play with implementation errors, misused modes and faulty PRNGs. Especially in CTF challenges, where nothing is really what it seems.
+- **Applied cryptography & CTF**: Without being a crypto-math, I like to play with implementation errors, misused modes and faulty PRNGs. Especially in CTF challenges, where nothing is really what it seems.
 
-- Linux & scripting**: Bash, Python or custom tools, I automate, monitor and bypass. A good script is sometimes better than a big tool.
+- **Linux & scripting**: Bash, Python or custom tools, I automate, monitor and bypass. A good script is sometimes better than a big tool.
 
-- Fun & Crackmes**: I like to code or solve small protected binaries. It's fun, cerebral, and it muscles the analysis.
+- **Fun & Crackmes**: I like to code or solve small protected binaries. It's fun, cerebral, and it muscles the analysis.
 
 ## 👨‍💻 Pourquoi ce blog ?
 
