@@ -1,5 +1,5 @@
 ---
-title: "Certifications"
+title: "🎓 Certifications"
 permalink: /certifications/
 layout: single
 ---
