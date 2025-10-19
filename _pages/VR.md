@@ -1,6 +1,6 @@
 ---
 title: "🕵 Vulneraility Research"
-permalink: /VR/
+permalink: /vr/
 layout: single
 ---
 
