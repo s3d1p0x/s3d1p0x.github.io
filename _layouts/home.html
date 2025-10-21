@@ -18,34 +18,8 @@ layout: default
     <div class="flex flex-col lg:flex-row">
       
       <!-- Sidebar - cachée sur mobile, visible en desktop -->
-      <aside class="hidden lg:block lg:w-64 lg:sticky lg:top-0 lg:h-screen bg-gray-800 p-6 text-white overflow-y-auto">
-        <div class="mb-8">
-          <h2 class="text-2xl font-bold mb-2">S3D1P0X</h2>
-          <p class="text-gray-400 text-sm">Offensive Security</p>
-        </div>
-        
-        <nav class="space-y-2">
-          <a href="/" class="block py-2 px-3 rounded hover:bg-gray-700 transition">🏠 Home</a>
-          <a href="#articles" class="block py-2 px-3 rounded hover:bg-gray-700 transition">📖 Articles</a>
-          
-          <div class="mt-6 mb-3">
-            <p class="text-gray-500 text-xs uppercase font-semibold">Categories</p>
-          </div>
-          
-          <a href="/web/" class="block py-2 px-3 rounded hover:bg-gray-700 transition text-sm">🔍 Web Pentest</a>
-          <a href="/network/" class="block py-2 px-3 rounded hover:bg-gray-700 transition text-sm">🌐 Network</a>
-          <a href="/ad/" class="block py-2 px-3 rounded hover:bg-gray-700 transition text-sm">🗂️ Active Directory</a>
-          <a href="/re/" class="block py-2 px-3 rounded hover:bg-gray-700 transition text-sm">⚔️ Reverse Eng.</a>
-          <a href="/malware/" class="block py-2 px-3 rounded hover:bg-gray-700 transition text-sm">🧪 Malware Analysis</a>
-          <a href="/vr/" class="block py-2 px-3 rounded hover:bg-gray-700 transition text-sm">🕵 Vuln Research</a>
-          <a href="/cryptography/" class="block py-2 px-3 rounded hover:bg-gray-700 transition text-sm">🧠 Cryptography</a>
-          <a href="/write-up/" class="block py-2 px-3 rounded hover:bg-gray-700 transition text-sm">📝 Write-Ups</a>
-          <a href="/projects/" class="block py-2 px-3 rounded hover:bg-gray-700 transition text-sm">💡 Projects</a>
-        </nav>
-        
-        <div class="mt-8 pt-8 border-t border-gray-700">
-          <p class="text-gray-500 text-xs">© 2024 S3D1P0X</p>
-        </div>
+      <aside class="lg:block lg:w-64 lg:sticky lg:top-0 lg:h-screen bg-gray-800 p-4 text-white">
+        {% include sidebar.html %}
       </aside>
       
       <!-- Contenu principal -->
