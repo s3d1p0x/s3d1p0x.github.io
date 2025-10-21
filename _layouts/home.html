@@ -12,88 +12,107 @@ layout: default
 
 <body class="bg-gray-900 text-gray-100 font-sans">
 
-  <div class="max-w-7xl mx-auto px-4 flex">
+  <div class="max-w-7xl mx-auto px-4">
 
     <!-- Layout avec sidebar + contenu -->
-    <div class="flex w-64 ml-[6cm] sticky top-0 h-screen bg-gray-800 p-4 text-white">
-      {% include sidebar.html %}
-    </div>
-    
-      <main class="flex-1 pl-8 pr-4"> <!-- Contenu principal -->
-  
-  
+    <div class="flex flex-col lg:flex-row">
+      
+      <!-- Sidebar - cachée sur mobile, visible en desktop -->
+      <aside class="hidden lg:block lg:w-64 lg:sticky lg:top-0 lg:h-screen bg-gray-800 p-4 text-white">
+        {% include sidebar.html %}
+      </aside>
+      
       <!-- Contenu principal -->
-      <main class="flex-1 pl-8 pr-4"> <!-- Ajuste pl-8 selon la largeur de ta sidebar -->
+      <main class="flex-1 lg:pl-8 w-full">
   
         <!-- Hero Section -->
-        <header class="bg-gray-800 py-20 text-center">
-            <h1 class="text-4xl md:text-6xl font-bold">Diving into the heart of offensive cybersecurity</h1>
-            <p class="mt-4 text-xl text-gray-400">Pentest • Reverse • Exploit Dev • Malware Analysis • Cryptography</p>
-            <a href="#articles" class="mt-6 inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full">📖 Read the latest articles</a>
+        <header class="bg-gray-800 py-12 md:py-20 text-center px-4 rounded-lg mt-4 lg:mt-0">
+          <h1 class="text-3xl md:text-4xl lg:text-6xl font-bold px-2">Diving into the heart of offensive cybersecurity</h1>
+          <p class="mt-4 text-lg md:text-xl text-gray-400 px-2">Pentest • Reverse • Exploit Dev • Malware Analysis • Cryptography</p>
+          <a href="#articles" class="mt-6 inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full transition">📖 Read the latest articles</a>
         </header>
     
         <!-- À propos -->
-        <section class="py-16 px-4 max-w-4xl mx-auto bg-gray-900 py-16 px-4">
-            <h2 class="text-3xl font-bold mb-4">About the blog</h2>
-            <p class="text-lg text-gray-300">
+        <section class="py-12 md:py-16 px-4 max-w-4xl mx-auto">
+          <h2 class="text-2xl md:text-3xl font-bold mb-4">About the blog</h2>
+          <p class="text-base md:text-lg text-gray-300">
             This blog is dedicated to all those who like to understand, disassemble, circumvent and exploit.
             Whether you're a pentester, a cybersecurity student, or a CTF enthusiast, you'll find in-depth analysis,
             write-ups, and real-life feedback.
-            </p>
+          </p>
         </section>
     
         <!-- Catégories -->
-        <section class="bg-gray-800 py-16 px-4">
-            <h2 class="text-3xl font-bold text-center mb-10">Main categories</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-                <a href="/web/" class="block bg-gray-700 p-6 rounded-xl shadow hover:bg-gray-600 transition">🔍 Web Pentest</a>
-                <a href="/network/" class="block bg-gray-700 p-6 rounded-xl shadow hover:bg-gray-600 transition">🌐 Network Pentest</a>
-                <a href="/ad/" class="block bg-gray-700 p-6 rounded-xl shadow hover:bg-gray-600 transition">🗂️ Active Directory</a>
-                <a href="/os/" class="block bg-gray-700 p-6 rounded-xl shadow hover:bg-gray-600 transition">🖥️ Operating Systems</a>
-                <a href="/re/" class="block bg-gray-700 p-6 rounded-xl shadow hover:bg-gray-600 transition">⚔️ Reverse Engineering</a>
-                <a href="/malware/" class="block bg-gray-700 p-6 rounded-xl shadow hover:bg-gray-600 transition">🧪 Malware Analysis</a>
-                <a href="/vr/" class="block bg-gray-700 p-6 rounded-xl shadow hover:bg-gray-600 transition">🕵 Vulnerability Research</a>
-                <a href="/cryptography/" class="block bg-gray-700 p-6 rounded-xl shadow hover:bg-gray-600 transition">🧠 Cryptography</a>
-                <a href="/write-up/" class="block bg-gray-700 p-6 rounded-xl shadow hover:bg-gray-600 transition">📝 Write-Up</a>
-                <a href="/projects/" class="block bg-gray-700 p-6 rounded-xl shadow hover:bg-gray-600 transition">💡 Projects</a>
-            </div>
+        <section class="bg-gray-800 py-12 md:py-16 px-4 rounded-lg">
+          <h2 class="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-10">Main categories</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 max-w-6xl mx-auto">
+            <a href="/web/" class="block bg-gray-700 p-4 md:p-6 rounded-xl shadow hover:bg-gray-600 transition text-center md:text-left">
+              <span class="text-lg md:text-xl">🔍 Web Pentest</span>
+            </a>
+            <a href="/network/" class="block bg-gray-700 p-4 md:p-6 rounded-xl shadow hover:bg-gray-600 transition text-center md:text-left">
+              <span class="text-lg md:text-xl">🌐 Network Pentest</span>
+            </a>
+            <a href="/ad/" class="block bg-gray-700 p-4 md:p-6 rounded-xl shadow hover:bg-gray-600 transition text-center md:text-left">
+              <span class="text-lg md:text-xl">🗂️ Active Directory</span>
+            </a>
+            <a href="/os/" class="block bg-gray-700 p-4 md:p-6 rounded-xl shadow hover:bg-gray-600 transition text-center md:text-left">
+              <span class="text-lg md:text-xl">🖥️ Operating Systems</span>
+            </a>
+            <a href="/re/" class="block bg-gray-700 p-4 md:p-6 rounded-xl shadow hover:bg-gray-600 transition text-center md:text-left">
+              <span class="text-lg md:text-xl">⚔️ Reverse Engineering</span>
+            </a>
+            <a href="/malware/" class="block bg-gray-700 p-4 md:p-6 rounded-xl shadow hover:bg-gray-600 transition text-center md:text-left">
+              <span class="text-lg md:text-xl">🧪 Malware Analysis</span>
+            </a>
+            <a href="/vr/" class="block bg-gray-700 p-4 md:p-6 rounded-xl shadow hover:bg-gray-600 transition text-center md:text-left">
+              <span class="text-lg md:text-xl">🕵 Vulnerability Research</span>
+            </a>
+            <a href="/cryptography/" class="block bg-gray-700 p-4 md:p-6 rounded-xl shadow hover:bg-gray-600 transition text-center md:text-left">
+              <span class="text-lg md:text-xl">🧠 Cryptography</span>
+            </a>
+            <a href="/write-up/" class="block bg-gray-700 p-4 md:p-6 rounded-xl shadow hover:bg-gray-600 transition text-center md:text-left">
+              <span class="text-lg md:text-xl">📝 Write-Up</span>
+            </a>
+            <a href="/projects/" class="block bg-gray-700 p-4 md:p-6 rounded-xl shadow hover:bg-gray-600 transition text-center md:text-left">
+              <span class="text-lg md:text-xl">💡 Projects</span>
+            </a>
+          </div>
         </section>
     
         <!-- Derniers articles -->
-        <section id="articles" class="py-16 px-4 max-w-6xl mx-auto bg-gray-900 py-16 px-4"">
-            <h2 class="text-3xl font-bold mb-10 text-center">Latest articles</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <article class="bg-gray-800 p-6 rounded-xl shadow">
-                    <h3 class="text-2xl font-semibold">CPTS review</h3>
-                    <p class="text-gray-400 mt-2">Published August 31, 2024 - Feedback on my experience with HackTheBox CPTS certification.</p>
-                    <a href="https://s3d1p0x.github.io/certifications/CPTS/" class="text-blue-500 hover:underline mt-3 inline-block">Read the article</a>
-                </article>
-            </div>
+        <section id="articles" class="py-12 md:py-16 px-4 max-w-6xl mx-auto">
+          <h2 class="text-2xl md:text-3xl font-bold mb-8 md:mb-10 text-center">Latest articles</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+            <article class="bg-gray-800 p-4 md:p-6 rounded-xl shadow">
+              <h3 class="text-xl md:text-2xl font-semibold">CPTS review</h3>
+              <p class="text-gray-400 mt-2 text-sm md:text-base">Published August 31, 2024 - Feedback on my experience with HackTheBox CPTS certification.</p>
+              <a href="https://s3d1p0x.github.io/certifications/CPTS/" class="text-blue-500 hover:underline mt-3 inline-block">Read the article</a>
+            </article>
+          </div>
         </section>
     
         <!-- Zone CTF / Fun -->
-        <section class="bg-gray-900 py-16 px-4">
-          <h2 class="text-3xl font-bold text-center mb-10">🕹️ Zone CTF & Fun</h2>
-          <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+        <section class="bg-gray-800 py-12 md:py-16 px-4 rounded-lg mb-4">
+          <h2 class="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-10">🕹️ Zone CTF & Fun</h2>
+          <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
         
-            <a href="/ctf/challenge-of-the-week" class="block bg-gray-800 p-6 rounded-xl shadow hover:bg-gray-700 transition">
-              <h3 class="text-xl font-semibold">🎯 Challenge of the week</h3>
-              <p class="text-gray-400 mt-2">Test your skills with a unique challenge every week.</p>
+            <a href="/ctf/challenge-of-the-week" class="block bg-gray-700 p-4 md:p-6 rounded-xl shadow hover:bg-gray-600 transition">
+              <h3 class="text-lg md:text-xl font-semibold">🎯 Challenge of the week</h3>
+              <p class="text-gray-400 mt-2 text-sm md:text-base">Test your skills with a unique challenge every week.</p>
             </a>
         
-            <a href="/ctf/reverse-extract" class="block bg-gray-800 p-6 rounded-xl shadow hover:bg-gray-700 transition">
-              <h3 class="text-xl font-semibold">🧬 Reverse extract</h3>
-              <p class="text-gray-400 mt-2">Dismantle a little obscure binary from CTFs.</p>
+            <a href="/ctf/reverse-extract" class="block bg-gray-700 p-4 md:p-6 rounded-xl shadow hover:bg-gray-600 transition">
+              <h3 class="text-lg md:text-xl font-semibold">🧬 Reverse extract</h3>
+              <p class="text-gray-400 mt-2 text-sm md:text-base">Dismantle a little obscure binary from CTFs.</p>
             </a>
         
-            <a href="/ctf/crackme" class="block bg-gray-800 p-6 rounded-xl shadow hover:bg-gray-700 transition">
-              <h3 class="text-xl font-semibold">💣 Crackme</h3>
-              <p class="text-gray-400 mt-2">Try to bypass the protection of a homemade binary.</p>
+            <a href="/ctf/crackme" class="block bg-gray-700 p-4 md:p-6 rounded-xl shadow hover:bg-gray-600 transition">
+              <h3 class="text-lg md:text-xl font-semibold">💣 Crackme</h3>
+              <p class="text-gray-400 mt-2 text-sm md:text-base">Try to bypass the protection of a homemade binary.</p>
             </a>
         
           </div>
         </section>
-
   
       </main>
     </div>
