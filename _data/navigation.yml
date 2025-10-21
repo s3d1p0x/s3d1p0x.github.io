@@ -11,6 +11,8 @@ main:
     url: /ad/
   - title: "Operating Systems"
     url: /os/
+  - title: "Binary Exploitation"
+    url: /binary_exploitation/
   - title: "Reverse Engineering"
     url: /re/
   - title: "Malware Analysis"
