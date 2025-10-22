@@ -17,7 +17,7 @@ layout: default
   <div class="flex flex-col lg:flex-row">
       
       <!-- Sidebar - cachée sur mobile, visible en desktop -->
-      <aside class="lg:block lg:w-64 lg:fixed lg:left-0 lg:h-screen bg-gray-800 p-6 text-white overflow-y-auto z-40" style="top: 64px; height: calc(100vh - 64px);">
+      <aside class="hidden lg:block lg:w-64 lg:fixed lg:left-0 lg:h-screen bg-gray-800 p-6 text-white overflow-y-auto z-40" style="top: 64px; height: calc(100vh - 64px);">
         <div class="mb-8">
           <h2 class="text-2xl font-bold mb-2">S3D1P0X</h2>
           <p class="text-gray-400 text-sm">Offensive Security</p>
