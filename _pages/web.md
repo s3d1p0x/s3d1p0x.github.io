@@ -14,7 +14,7 @@ layout: default
 <body class="bg-gray-900 text-gray-100 font-sans">
 
   <!-- Layout avec sidebar + contenu -->
-  <div class="flex flex-col lg:flex-row">
+ <!--  <div class="flex flex-col lg:flex-row">
       
       <!-- Sidebar - cachée sur mobile, visible en desktop -->
       <aside class="lg:block lg:w-64 lg:fixed lg:left-0 lg:h-screen bg-gray-800 p-6 text-white overflow-y-auto z-40" style="top: 64px; height: calc(100vh - 64px);">
@@ -46,6 +46,7 @@ layout: default
           <p class="text-gray-500 text-xs">© 2024 S3D1P0X</p>
         </div>
       </aside>
+  --> 
   <div class="max-w-7xl lg:ml-64 mx-auto px-4">
 
       <!-- Contenu principal -->
