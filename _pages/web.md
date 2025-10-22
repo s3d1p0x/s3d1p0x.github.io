@@ -13,10 +13,9 @@ layout: default
 
 <body class="bg-gray-900 text-gray-100 font-sans">
 
-  <!-- Layout avec sidebar + contenu -->
-  <div class="flex flex-col lg:flex-row">
-      
-        <!-- Layout avec sidebar + contenu -->
+  <div class="max-w-7xl mx-auto px-4">
+
+    <!-- Layout avec sidebar + contenu -->
     <div class="flex flex-col lg:flex-row">
       
       <!-- Sidebar - cachée sur mobile, visible en desktop -->
@@ -24,10 +23,8 @@ layout: default
         {% include sidebar.html %}
       </aside>
       
-  <div class="max-w-7xl lg:ml-64 mx-auto px-4">
-
       <!-- Contenu principal -->
-      <main class="flex-1 w-full">
+      <main class="flex-1 lg:pl-8 w-full">
   
         <!-- Hero Section -->
         <header class="bg-gray-800 py-12 md:py-16 text-center px-4 rounded-lg mt-4 lg:mt-0">
