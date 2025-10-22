@@ -147,4 +147,3 @@ layout: default
       </main>
     </div>
   </div>
-</div>
