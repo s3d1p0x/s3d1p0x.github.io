@@ -4,7 +4,6 @@ permalink: /web/
 layout: default
 ---
 
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -20,7 +19,7 @@ layout: default
     <div class="flex flex-col lg:flex-row">
       
       <!-- Sidebar - cachée sur mobile, visible en desktop -->
-      <aside class="hidden lg:block lg:w-64 lg:sticky lg:top-0 lg:h-screen bg-gray-800 p-6 text-white overflow-y-auto">
+      <aside class="lg:block lg:w-64 lg:sticky lg:top-0 lg:h-screen bg-gray-800 p-6 text-white overflow-y-auto">
         <div class="mb-8">
           <h2 class="text-2xl font-bold mb-2">S3D1P0X</h2>
           <p class="text-gray-400 text-sm">Offensive Security</p>
