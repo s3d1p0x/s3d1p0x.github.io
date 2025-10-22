@@ -57,7 +57,7 @@ layout: default
 
         <!-- Articles Windows -->
         <section id="windows" class="py-8 md:py-12 px-4 max-w-6xl mx-auto">
-          <h2 class="text-2xl md:text-3xl font-bold mb-6 md:mb-8 border-l-4 border-blue-600 pl-4">🪟 Windows</h2>
+          <h2 class="text-2xl md:text-3xl font-bold mb-6 md:mb-8 border-l-4 border-blue-600 pl-4">⊞ Windows</h2>
           
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             {% assign windows_posts = site.categories.os | where_exp: "post", "post.subcategory == 'windows'" %}
