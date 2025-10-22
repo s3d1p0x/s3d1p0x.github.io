@@ -16,14 +16,15 @@ layout: default
   <!-- Layout avec sidebar + contenu -->
   <div class="flex flex-col lg:flex-row">
       
-      <!-- Sidebar - cachée sur mobile, visible en desktop -->
-          <!-- Layout avec sidebar + contenu -->
+        <!-- Layout avec sidebar + contenu -->
     <div class="flex flex-col lg:flex-row">
       
       <!-- Sidebar - cachée sur mobile, visible en desktop -->
       <aside class="lg:block lg:w-64 lg:sticky lg:top-0 lg:h-screen bg-gray-800 p-4 text-white">
         {% include sidebar.html %}
       </aside>
+      
+  <div class="max-w-7xl lg:ml-64 mx-auto px-4">
 
       <!-- Contenu principal -->
       <main class="flex-1 w-full">
