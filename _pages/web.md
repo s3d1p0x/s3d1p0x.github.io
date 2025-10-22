@@ -28,7 +28,7 @@ layout: default
   
         <!-- Hero Section -->
         <header class="bg-gray-800 py-12 md:py-16 text-center px-4 rounded-lg mt-4 lg:mt-0">
-          <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold">🔍 Web Pentest</h1>
+          <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold">🔍 Web</h1>
           <p class="mt-4 text-base md:text-lg text-gray-400">Explore vulnerabilities and exploitation techniques for web applications</p>
         </header>
 
