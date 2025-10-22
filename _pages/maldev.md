@@ -4,7 +4,6 @@ permalink: /maldev/
 layout: default
 ---
 
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -39,7 +38,7 @@ layout: default
             
             <a href="#evasion" class="block bg-gray-800 p-6 md:p-8 rounded-xl shadow-lg hover:bg-gray-700 transition transform hover:scale-105">
               <div class="text-center">
-                <span class="text-4xl md:text-5xl mb-4 block">🥷</span>
+                <span class="text-4xl md:text-5xl mb-4 block">👥</span>
                 <h2 class="text-xl md:text-2xl font-bold mb-2">Evasion Techniques</h2>
                 <p class="text-gray-400 text-sm md:text-base">AV/EDR bypass, obfuscation, sandbox detection and evasion</p>
               </div>
@@ -90,7 +89,7 @@ layout: default
 
         <!-- Articles Evasion Techniques -->
         <section id="evasion" class="py-8 md:py-12 px-4 max-w-6xl mx-auto">
-          <h2 class="text-2xl md:text-3xl font-bold mb-6 md:mb-8 border-l-4 border-blue-600 pl-4">🥷 Evasion Techniques</h2>
+          <h2 class="text-2xl md:text-3xl font-bold mb-6 md:mb-8 border-l-4 border-blue-600 pl-4">👥 Evasion Techniques</h2>
           
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             {% assign evasion_posts = site.categories.maldev | where_exp: "post", "post.subcategory == 'evasion'" %}
