@@ -17,42 +17,13 @@ layout: default
   <div class="flex flex-col lg:flex-row">
       
       <!-- Sidebar - cachée sur mobile, visible en desktop -->
+          <!-- Layout avec sidebar + contenu -->
+    <div class="flex flex-col lg:flex-row">
+      
+      <!-- Sidebar - cachée sur mobile, visible en desktop -->
       <aside class="lg:block lg:w-64 lg:sticky lg:top-0 lg:h-screen bg-gray-800 p-4 text-white">
-        
-  <div class="sidebar sticky">
-  
-<div itemscope="" itemtype="https://schema.org/Person" class="h-card">
-  
-    <div class="author__avatar">
-      <a href="https://s3d1p0x.github.io/">
-        <img src="/assets/images/bio-photo.jpg" alt="s3d1p0x" itemprop="image" class="u-photo">
-      </a>
-    </div>
-  
-
-  <div class="author__content">
-    <h3 class="author__name p-name" itemprop="name">
-      <a class="u-url" rel="me" href="https://s3d1p0x.github.io/" itemprop="url">s3d1p0x</a>
-    </h3>
-    
-      <div class="author__bio p-note" itemprop="description">
-        <p>Exploring vulnerabilities, Mastering attacks, Sharing offensive cybersecurity knowledge.</p>
-
-      </div>
-    
-  </div>
-
-  <div class="author__urls-wrapper">
-    <button class="btn btn--inverse">Follow</button>
-    <ul class="author__urls social-icons">
-            <li><a href="https://github.com/s3d1p0x" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
-            <li><a href="https://www.linkedin.com/in/quentin-auspitz-cybersecurity-pentest" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fa-brands fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span></a></li>
-    </ul>
-  </div>
-</div>
-  </div>
+        {% include sidebar.html %}
       </aside>
-  <div class="max-w-7xl lg:ml-64 mx-auto px-4">
 
       <!-- Contenu principal -->
       <main class="flex-1 w-full">
