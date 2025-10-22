@@ -1,5 +1,5 @@
 ---
-title: "🌐 Network Pentest"
+title: "🌐 Network"
 permalink: /network/
 layout: single
 ---
