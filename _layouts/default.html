@@ -37,74 +37,70 @@
 
 
 
-    <!-- Bouton de traduction -->
-<div class="mt-4 pt-4 border-t border-gray-700">
-  <div id="google_translate_element"></div>
-</div>
-
-<!-- Script Google Translate -->
-<script type="text/javascript">
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({
-    pageLanguage: 'en',
-    includedLanguages: 'fr,en',
-    layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-    autoDisplay: false
-  }, 'google_translate_element');
-}
-</script>
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
-<!-- Style personnalisé pour le bouton -->
-<style>
-#google_translate_element {
-  text-align: center;
-}
-
-.goog-te-banner-frame.skiptranslate {
-  display: none !important;
-}
-
-body {
-  top: 0px !important;
-}
-
-.goog-te-gadget {
-  font-family: inherit !important;
-  font-size: 14px !important;
-}
-
-.goog-te-gadget-simple {
-  background-color: #374151 !important;
-  border: 1px solid #4B5563 !important;
-  padding: 8px 12px !important;
-  border-radius: 8px !important;
-  font-size: 14px !important;
-  color: #D1D5DB !important;
-  cursor: pointer !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  gap: 8px !important;
-}
-
-.goog-te-gadget-simple:hover {
-  background-color: #4B5563 !important;
-}
-
-.goog-te-gadget-simple .goog-te-menu-value {
-  color: #D1D5DB !important;
-}
-
-.goog-te-gadget-simple .goog-te-menu-value span {
-  color: #D1D5DB !important;
-}
-
-.goog-te-gadget-icon {
-  display: inline-block !important;
-  margin-right: 4px !important;
-}
-</style>
-
+    <div class="mt-4 pt-4 border-t border-gray-700">
+      <button onclick="translateToFrench()" class="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition flex items-center justify-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="2" y1="12" x2="22" y2="12"></line>
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+        </svg>
+        <span id="translate-text">Traduire en Français</span>
+      </button>
+      <div id="google_translate_element" style="display: none;"></div>
+    </div>
+    
+    <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'fr,en',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+        autoDisplay: false
+      }, 'google_translate_element');
+    }
+    
+    function translateToFrench() {
+      var translateSelect = document.querySelector('.goog-te-combo');
+      if (translateSelect) {
+        var currentLang = translateSelect.value;
+        if (currentLang === 'fr') {
+          translateSelect.value = 'en';
+          document.getElementById('translate-text').textContent = 'Traduire en Français';
+        } else {
+          translateSelect.value = 'fr';
+          document.getElementById('translate-text').textContent = 'Translate to English';
+        }
+        translateSelect.dispatchEvent(new Event('change'));
+      }
+    }
+    
+    // Initialiser après le chargement de Google Translate
+    window.addEventListener('load', function() {
+      setTimeout(function() {
+        var translateSelect = document.querySelector('.goog-te-combo');
+        if (translateSelect) {
+          translateSelect.addEventListener('change', function() {
+            var btnText = document.getElementById('translate-text');
+            if (this.value === 'fr') {
+              btnText.textContent = 'Translate to English';
+            } else {
+              btnText.textContent = 'Traduire en Français';
+            }
+          });
+        }
+      }, 1000);
+    });
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    
+    <style>
+    .goog-te-banner-frame.skiptranslate {
+      display: none !important;
+    }
+    body {
+      top: 0px !important;
+    }
+    </style>
 
 
 
