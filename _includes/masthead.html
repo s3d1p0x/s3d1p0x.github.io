@@ -60,32 +60,62 @@
           <!-- Widget Google Translate caché -->
           <div id="google_translate_element" style="display: none;"></div>
         </div>
+
+        
         
         <script type="text/javascript">
-        function googleTranslateElementInit() {
-          new google.translate.TranslateElement({
-            pageLanguage: 'en',
-            includedLanguages: 'fr,en',
-            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-            autoDisplay: false
-          }, 'google_translate_element');
-        }
-        
-        function toggleLanguage() {
-          setTimeout(function() {
+          var translateInitialized = false;
+          
+          function googleTranslateElementInit() {
+            try {
+              new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'fr,en',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: false
+              }, 'google_translate_element');
+              
+              // Attendre plus longtemps et vérifier plusieurs fois
+              checkTranslateReady(0);
+            } catch(e) {
+              console.error('Google Translate init error:', e);
+            }
+          }
+          
+          function checkTranslateReady(attempt) {
+            if (attempt > 10) {
+              console.warn('Google Translate failed to load after 10 attempts');
+              return;
+            }
+            
+            setTimeout(function() {
+              var translateSelect = document.querySelector('.goog-te-combo');
+              if (translateSelect) {
+                translateInitialized = true;
+                console.log('✅ Google Translate ready!');
+              } else {
+                console.log('⏳ Attempt ' + (attempt + 1) + '/10: Waiting for translate...');
+                checkTranslateReady(attempt + 1);
+              }
+            }, 500);
+          }
+          
+          function toggleLanguage() {
+            if (!translateInitialized) {
+              alert('Please wait a moment for translation to load...');
+              setTimeout(toggleLanguage, 1000);
+              return;
+            }
+            
             var translateSelect = document.querySelector('.goog-te-combo');
             if (translateSelect) {
               var currentLang = translateSelect.value;
-              if (currentLang === 'fr') {
-                translateSelect.value = 'en';
-              } else {
-                translateSelect.value = 'fr';
-              }
+              translateSelect.value = (currentLang === 'fr') ? 'en' : 'fr';
               translateSelect.dispatchEvent(new Event('change'));
+              console.log('🌍 Language changed to:', translateSelect.value);
             }
-          }, 100);
-        }
-        </script>
+          }
+          </script>
         
         <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
         
