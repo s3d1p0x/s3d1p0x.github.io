@@ -42,11 +42,11 @@
         <div class="language-selector-wrapper">
           <button 
             onclick="toggleLanguage()" 
-            class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-gray-700 active:bg-gray-600 border border-gray-600 shadow-sm active:shadow-none h-9 w-9 transition-all" 
+            class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-gray-700 active:bg-gray-600 border border-gray-600 shadow-sm active:shadow-none h-8 w-8 transition-all" 
             type="button"
             aria-label="Change language"
             title="Translate">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-languages h-5 w-5">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-languages h-4 w-4">
               <path d="m5 8 6 6"></path>
               <path d="m4 14 6-6 2-3"></path>
               <path d="M2 5h12"></path>
@@ -72,12 +72,10 @@
         }
         
         function toggleLanguage() {
-          // Attendre que Google Translate soit chargé
           setTimeout(function() {
             var translateSelect = document.querySelector('.goog-te-combo');
             if (translateSelect) {
               var currentLang = translateSelect.value;
-              // Basculer entre français et anglais
               if (currentLang === 'fr') {
                 translateSelect.value = 'en';
               } else {
@@ -104,6 +102,7 @@
         /* Style du bouton de traduction */
         .language-selector-wrapper {
           display: inline-block;
+          margin-left: 1.5rem; /* Espacement comme entre les titres */
         }
         
         .language-selector-wrapper button {
