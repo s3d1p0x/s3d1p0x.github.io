@@ -4,6 +4,7 @@ permalink: /vr/
 layout: default
 ---
 
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -34,7 +35,7 @@ layout: default
 
         <!-- Catégories Vulnerability Research -->
         <section class="py-8 md:py-12 px-4">
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 max-w-6xl mx-auto">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 max-w-6xl mx-auto">
             
             <a href="#fuzzing" class="block bg-gray-800 p-6 md:p-8 rounded-xl shadow-lg hover:bg-gray-700 transition transform hover:scale-105">
               <div class="text-center">
@@ -73,6 +74,22 @@ layout: default
                 <span class="text-4xl md:text-5xl mb-4 block">🔬</span>
                 <h2 class="text-xl md:text-2xl font-bold mb-2">Binary Analysis</h2>
                 <p class="text-gray-400 text-sm md:text-base">Vulnerability discovery in closed-source, binary diffing</p>
+              </div>
+            </a>
+
+            <a href="#browser" class="block bg-gray-800 p-6 md:p-8 rounded-xl shadow-lg hover:bg-gray-700 transition transform hover:scale-105">
+              <div class="text-center">
+                <span class="text-4xl md:text-5xl mb-4 block">🌐</span>
+                <h2 class="text-xl md:text-2xl font-bold mb-2">Browser</h2>
+                <p class="text-gray-400 text-sm md:text-base">Browser engine vulnerabilities, JIT bugs, renderer exploits</p>
+              </div>
+            </a>
+
+            <a href="#kernel" class="block bg-gray-800 p-6 md:p-8 rounded-xl shadow-lg hover:bg-gray-700 transition transform hover:scale-105">
+              <div class="text-center">
+                <span class="text-4xl md:text-5xl mb-4 block">⚙️</span>
+                <h2 class="text-xl md:text-2xl font-bold mb-2">Kernel</h2>
+                <p class="text-gray-400 text-sm md:text-base">Kernel vulnerabilities, privilege escalation, driver exploits</p>
               </div>
             </a>
 
@@ -237,6 +254,68 @@ layout: default
             {% else %}
               <div class="col-span-2 text-center py-8 text-gray-500">
                 <p class="text-lg">No binary analysis articles yet. Stay tuned!</p>
+              </div>
+            {% endif %}
+          </div>
+        </section>
+
+        <!-- Articles Browser -->
+        <section id="browser" class="py-8 md:py-12 px-4 max-w-6xl mx-auto">
+          <h2 class="text-2xl md:text-3xl font-bold mb-6 md:mb-8 border-l-4 border-cyan-600 pl-4">🌐 Browser</h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+            {% assign browser_posts = site.categories.vr | where_exp: "post", "post.subcategory == 'browser'" %}
+            {% if browser_posts.size > 0 %}
+              {% for post in browser_posts %}
+              <article class="bg-gray-800 p-4 md:p-6 rounded-xl shadow">
+                <h3 class="text-xl md:text-2xl font-semibold">
+                  <a href="{{ post.url | relative_url }}" class="hover:text-blue-500 transition">{{ post.title }}</a>
+                </h3>
+                {% if post.excerpt %}
+                <p class="text-gray-400 mt-2 text-sm md:text-base">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+                {% endif %}
+                <div class="mt-4 flex items-center text-sm text-gray-500">
+                  <span>📅 {{ post.date | date: "%B %d, %Y" }}</span>
+                  {% if post.read_time %}
+                  <span class="ml-4">⏱️ {{ post.read_time }}</span>
+                  {% endif %}
+                </div>
+              </article>
+              {% endfor %}
+            {% else %}
+              <div class="col-span-2 text-center py-8 text-gray-500">
+                <p class="text-lg">No browser vulnerability articles yet. Stay tuned!</p>
+              </div>
+            {% endif %}
+          </div>
+        </section>
+
+        <!-- Articles Kernel -->
+        <section id="kernel" class="py-8 md:py-12 px-4 max-w-6xl mx-auto">
+          <h2 class="text-2xl md:text-3xl font-bold mb-6 md:mb-8 border-l-4 border-indigo-600 pl-4">⚙️ Kernel</h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+            {% assign kernel_posts = site.categories.vr | where_exp: "post", "post.subcategory == 'kernel'" %}
+            {% if kernel_posts.size > 0 %}
+              {% for post in kernel_posts %}
+              <article class="bg-gray-800 p-4 md:p-6 rounded-xl shadow">
+                <h3 class="text-xl md:text-2xl font-semibold">
+                  <a href="{{ post.url | relative_url }}" class="hover:text-blue-500 transition">{{ post.title }}</a>
+                </h3>
+                {% if post.excerpt %}
+                <p class="text-gray-400 mt-2 text-sm md:text-base">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+                {% endif %}
+                <div class="mt-4 flex items-center text-sm text-gray-500">
+                  <span>📅 {{ post.date | date: "%B %d, %Y" }}</span>
+                  {% if post.read_time %}
+                  <span class="ml-4">⏱️ {{ post.read_time }}</span>
+                  {% endif %}
+                </div>
+              </article>
+              {% endfor %}
+            {% else %}
+              <div class="col-span-2 text-center py-8 text-gray-500">
+                <p class="text-lg">No kernel vulnerability articles yet. Stay tuned!</p>
               </div>
             {% endif %}
           </div>
